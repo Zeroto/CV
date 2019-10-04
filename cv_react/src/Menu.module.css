@@ -1,0 +1,28 @@
+.Menu {
+  border-right: 1px solid green;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.Menu ul {
+  padding: 0;
+}
+
+.Menu li {
+  list-style: none;
+}
+
+.MenuItem {
+  text-decoration-line: none;
+  color: rgb(190, 190, 190)
+}
+
+.ActiveMenuItem {
+  color: white;
+  font-weight: 700;
+}
+
+.MenuItem:hover {
+  color: rgb(220, 220, 220)
+}
