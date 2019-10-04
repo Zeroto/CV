@@ -1,0 +1,56 @@
+{
+  "PersonalDetails":{
+    "Name": "Sander Homan",
+    "MaritalStatus": "Single",
+    "Address":{
+      "Street": "Gedempte Molenwijk",
+      "Number": "15",
+      "City": "Heerenveen",
+      "Country": "Netherlands"
+    }
+  },
+  "Education": [
+    {
+      "Description": "Computer Science - Bachelor of Engineering",
+      "Location":"Noordelijke hogeschool Leeuwarden",
+      "Period": "2000-2004"
+    },
+    {
+      "Description": "Japanese",
+      "Location": "YAMASA言語文化学院 Okazaki",
+      "Period": "2009-2011"
+    }
+  ],
+  "Work":[
+    {
+      "Company": "Sogeti - SNS Reaal",
+      "Period": "2004-2006",
+      "Description": "Contracted out to an insurance company",
+      "Skills": ["Java", "LINC"]
+    },
+    {
+      "Company": "Be-Value",
+      "Period": "2006-2009",
+      "Description": "Maintenance and development for various clients",
+      "Skills": ["C#", "ASP.net", "Java", "Javascript", "HTML", "CSS"]
+    },
+    {
+      "Company": "Freelance",
+      "Period": "2010 - 2014",
+      "Description": "Freelance game development and development of tools. Also wrote support tooling for a Japanese language study minecraft server",
+      "Skills": ["C#", "Unity", "NodeJS", "Javascript", "HTML", "CSS3", "Java"]
+    },
+    {
+      "Company": "Lasaulec - Distil",
+      "Period": "2014 - Now",
+      "Description": "Lead developer for various projects including a webshop and a clothing/tools management system",
+      "Skills": ["C#", "F#", "React", "HTML5", "ES2015", "Javascript", "CSS3", "AWS", "Azure", "NodeJS", "ASP.net"]
+    }
+  ],
+  "Skills": {
+    "Programming Languages": [ "Javascript", "F#", "C#", "Python", "Java"],
+    "Web": ["React", "Babel", "Webpack", "Angular 1", "Bootstrap", "ASP.net"],
+    "Version Control": ["GIT", "Mercurial", "svn"],
+    "Other": ["Cassandra", "Elasticsearch", "Sql server", "PostgreSQL", "OrientDB"]
+  }
+}
