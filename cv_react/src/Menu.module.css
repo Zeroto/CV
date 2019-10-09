@@ -15,7 +15,8 @@
 
 .MenuItem {
   text-decoration-line: none;
-  color: rgb(190, 190, 190)
+  color: rgb(190, 190, 190);
+  outline: none;
 }
 
 .ActiveMenuItem {
