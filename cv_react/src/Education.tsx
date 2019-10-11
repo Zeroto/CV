@@ -17,7 +17,7 @@ const EducationEntry: React.FC<EducationEntryProps> = ({entry}) => (
 
 const EducationList: React.FC<PromiseWrapperConsumer<Data>> = ({data, error, completed}) => {
   if (completed && data) {
-    const e = data.Education.map(e => <EducationEntry entry={e}/>);
+    const e = data.Education.map(e => <EducationEntry key={e.Description} entry={e}/>);
     return <React.Fragment>{e}</React.Fragment>;
   }
   return <Spinner/>;

@@ -1,24 +1,28 @@
 import React from 'react';
 import styles from './Menu.module.css';
-import { NavLink } from 'react-router-dom';
+import classnames from 'classnames';
 
 interface MenuItemProps {
   to: string
   label: string
-  exact?: boolean
+  isActive?: boolean
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({to, label, exact=false}) => (
-  <li><NavLink exact={exact} to={to} activeClassName={styles.ActiveMenuItem} className={styles.MenuItem}>{label}</NavLink></li>
+const MenuItem: React.FC<MenuItemProps> = ({to, label, isActive=false}) => (
+  <li><a href={to} className={classnames(styles.MenuItem, {[styles.ActiveMenuItem]: isActive})}>{label}</a></li>
 );
 
-const Menu: React.FC = () => (
+interface MenuProps {
+  activeItem: string;
+}
+
+const Menu: React.FC<MenuProps> = ({activeItem}) => (
   <nav className={styles.Menu}>
     <ul>
-      <MenuItem exact to="/" label="Home"/>
-      <MenuItem to="/education" label="Education"/>
-      <MenuItem to="/work_history" label="Work history"/>
-      <MenuItem to="/skills" label="Skills"/>
+      <MenuItem to="#home" label="Home" isActive={activeItem.toLocaleLowerCase()==="home"}/>
+      <MenuItem to="#education" label="Education" isActive={activeItem.toLocaleLowerCase()==="education"}/>
+      <MenuItem to="#work_history" label="Work history" isActive={activeItem.toLocaleLowerCase()==="work history"}/>
+      <MenuItem to="#skills" label="Skills" isActive={activeItem.toLocaleLowerCase()==="skills"}/>
     </ul>
   </nav>
 );

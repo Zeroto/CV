@@ -4,3 +4,10 @@
   background-color: #dfdfdf;
   min-height: 100vh;
 }
+
+.content {
+  height: 100vh;
+  overflow-y: scroll;
+  color: black;
+  padding: 0 10px;
+}
