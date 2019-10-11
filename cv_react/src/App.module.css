@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: row;
-  background-color: #dfdfdf;
+  background-color: hsl(0, 0%, 87%);
   min-height: 100vh;
 }
 
@@ -9,5 +9,11 @@
   height: 100vh;
   overflow-y: scroll;
   color: black;
-  padding: 0 10px;
+}
+
+.section {
+  padding: 10px 10px;
+  min-height: 100vh;
+  background: rgb(223,223,223);
+  background: linear-gradient(0deg, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 87%) 100%);
 }

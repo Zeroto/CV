@@ -36,7 +36,7 @@ const Section: React.FC<SectionProps> = ({title, onVisiblilityChanged, children}
   }, [headerElement, onVisiblilityChanged, title]);
 
   return (
-    <div ref={headerElement}>
+    <div ref={headerElement} className={styles.section}>
       <h2  id={title.toLocaleLowerCase().replace(' ', '_')}>{title}</h2>
       {children}
     </div>
