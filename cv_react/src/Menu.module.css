@@ -1,8 +1,9 @@
 .Menu {
   border-right: 1px solid green;
   color: white;
-  padding: 20px;
   text-transform: uppercase;
+  background-color: #282c34;
+  min-width: 165px;
 }
 
 .Menu ul {
@@ -15,15 +16,19 @@
 
 .MenuItem {
   text-decoration-line: none;
-  color: rgb(190, 190, 190);
+  color: rgb(223, 223, 223);
   outline: none;
+  display: flex;
+  flex: 1 0 auto;
+  padding: 5px 20px;
 }
 
 .ActiveMenuItem {
   color: white;
   font-weight: 700;
+  background-color: hsl(220, 13%, 50%);
 }
 
 .MenuItem:hover {
-  color: rgb(220, 220, 220)
+  background-color: hsl(220, 13%, 40%);
 }
