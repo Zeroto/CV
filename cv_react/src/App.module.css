@@ -9,6 +9,7 @@
   height: 100vh;
   overflow-y: scroll;
   color: black;
+  scroll-behavior: smooth;
 }
 
 .section {

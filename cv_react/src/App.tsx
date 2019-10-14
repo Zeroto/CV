@@ -5,6 +5,7 @@ import Menu from './Menu';
 import Home from './Home';
 import Education from './Education';
 import WorkHistory from './WorkHistory';
+import Skills from './Skills';
 
 import { PromiseWrapper } from './Util';
 
@@ -16,10 +17,10 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({title, onVisiblilityChanged, children}) => {
-  const headerElement = useRef<HTMLHeadingElement>(null);
+  const containerElement = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (headerElement.current) {
-      const elem = headerElement.current;
+    if (containerElement.current) {
+      const elem = containerElement.current;
       const observer = new IntersectionObserver((entries) => {
         if (entries.some(e => e.isIntersecting)){
           console.log(`${title} became visible`); 
@@ -33,11 +34,11 @@ const Section: React.FC<SectionProps> = ({title, onVisiblilityChanged, children}
 
       return () => observer.unobserve(elem);
     }
-  }, [headerElement, onVisiblilityChanged, title]);
+  }, [containerElement, onVisiblilityChanged, title]);
 
   return (
-    <div ref={headerElement} className={styles.section}>
-      <h2  id={title.toLocaleLowerCase().replace(' ', '_')}>{title}</h2>
+    <div ref={containerElement} className={styles.section} id={title.toLocaleLowerCase().replace(' ', '_')}>
+      <h2>{title}</h2>
       {children}
     </div>
   )
@@ -70,8 +71,6 @@ const App: React.FC = () => {
     <div className={styles.App}>
       <Router>
         <Menu activeItem={activeItem}/>
-        {/* <Route exact path="/"><Home/></Route>
-        <Route exact path="/education"><PromiseWrapper data={p}><Education/></PromiseWrapper></Route> */}
         <div className={styles.content}>
           <Section title="Home" onVisiblilityChanged={setActiveItem}>
             <Home/>
@@ -81,6 +80,9 @@ const App: React.FC = () => {
           </Section>
           <Section title="Work History" onVisiblilityChanged={setActiveItem}>
             <PromiseWrapper data={p}><WorkHistory/></PromiseWrapper>
+          </Section>
+          <Section title="Skills" onVisiblilityChanged={setActiveItem}>
+            <PromiseWrapper data={p}><Skills/></PromiseWrapper>
           </Section>
         </div>
       </Router>
